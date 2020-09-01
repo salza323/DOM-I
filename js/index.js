@@ -67,7 +67,7 @@ nav[5].textContent = siteContent['nav']['nav-item-6']
 // const h1 = document.querySelector('h1')
 // h1.textContent = ('DOM ${<br>} Is<br> Awesome')
 const h1 = document.querySelector('h1')
-h1.textContent = siteContent['cta']['h1']
+h1.innerHTML = siteContent['cta']['h1'].split(' ').join('<br>')
 
 
 
@@ -167,7 +167,7 @@ console.log(contPs)
 // contPs[0].textContent = ('123 Way 456 Steet <br> Somewhere USA')
 // contPs[1].textContent = ('1 (888) 888-8888')
 // contPs[2].textContent = ('sales@greatidea.io')
-contPs[0].textContent = siteContent['contact']['address']
+contPs[0].innerHTML = siteContent['contact']['address'].split(' ').join('<br>')
 contPs[1].textContent = siteContent['contact']['phone']
 contPs[2].textContent = siteContent['contact']['email']
 
@@ -190,4 +190,11 @@ footer.textContent = siteContent['footer']['copyright']
 for (let i = 0; i < nav.length; i++) {
   nav[i].style.color = 'green'
 }
+
+const navBar = document.querySelector('nav')
+
+const newChild = document.createElement('a')
+newChild.textContent = "Misc"
+
+navBar.appendChild(newChild)
 
