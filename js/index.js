@@ -45,20 +45,31 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const title = document.querySelector('title')
 title.textContent = ('Great Idea! DOM')
 
+
 // add verbiage to links
 const nav = document.querySelectorAll('a')
 console.log(nav)
 
-nav[0].textContent = ('Services')
-nav[1].textContent = ('Product')
-nav[2].textContent = ('Vision')
-nav[3].textContent = ('Features')
-nav[4].textContent = ('About')
-nav[5].textContent = ('Contact')
+// nav[0].textContent = ('Services')
+nav[0].textContent = siteContent['nav']['nav-item-1']
+// nav[1].textContent = ('Product')
+nav[1].textContent = siteContent['nav']['nav-item-2']
+// nav[2].textContent = ('Vision')
+nav[2].textContent = siteContent['nav']['nav-item-3']
+// nav[3].textContent = ('Features')
+nav[3].textContent = siteContent['nav']['nav-item-4']
+// nav[4].textContent = ('About')
+nav[4].textContent = siteContent['nav']['nav-item-5']
+// nav[5].textContent = ('Contact')
+nav[5].textContent = siteContent['nav']['nav-item-6']
 
 // contents of h1
+// const h1 = document.querySelector('h1')
+// h1.textContent = ('DOM ${<br>} Is<br> Awesome')
 const h1 = document.querySelector('h1')
-h1.textContent = ('DOM ${<br>} Is<br> Awesome')
+h1.textContent = siteContent['cta']['h1']
+
+
 
 // adding src to cta img
 // need to get top section
@@ -67,11 +78,14 @@ console.log(topSection)
 
 const topImg = topSection.querySelector('#cta-img')
 
-topImg.src = 'img/header-img.png'
+// topImg.src = 'img/header-img.png'
+topImg.src = siteContent['cta']['img-src']
 
 // add verbiage to button in cta class
+// const topButton = topSection.querySelector('button')
+// topButton.textContent = ('Get Started')
 const topButton = topSection.querySelector('button')
-topButton.textContent = ('Get Started')
+topButton.textContent = siteContent['cta']['button']
 
 // access to main-content
 const mainContent = document.querySelector ('.main-content')
@@ -86,19 +100,27 @@ console.log(topInMain)
 const topH4s = topInMain.querySelectorAll ('h4')
 console.log(topH4s)
 
-topH4s[0].textContent = ('Features')
-topH4s[1].textContent = ('About')
+// topH4s[0].textContent = ('Features')
+// topH4s[1].textContent = ('About')
+topH4s[0].textContent = siteContent['main-content']['features-h4']
+topH4s[1].textContent = siteContent['main-content']['about-h4']
+
 
 // add verbiage to p tags
 const topPs = topInMain.querySelectorAll ('p')
 console.log(topPs)
 
-topPs[0].textContent = ('Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.')
-topPs[1].textContent = ('About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.')
+// topPs[0].textContent = ('Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.')
+// topPs[1].textContent = ('About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.')
+topPs[0].textContent = siteContent['main-content']['features-content']
+topPs[1].textContent = siteContent['main-content']['about-content']
+
 
 //add image in middle of main content
+// const midImg = mainContent.querySelector ('.middle-img')
+// midImg.src = 'img/mid-page-accent.jpg'
 const midImg = mainContent.querySelector ('.middle-img')
-midImg.src = 'img/mid-page-accent.jpg'
+midImg.src = siteContent['main-content']['middle-img-src']
 
 //access to bottom content
 const bottInMain = mainContent.querySelector('.bottom-content')
@@ -107,18 +129,24 @@ const bottInMain = mainContent.querySelector('.bottom-content')
 const bottH4s = bottInMain.querySelectorAll ('h4')
 console.log(bottH4s)
 
-bottH4s[0].textContent = ('Services')
-bottH4s[1].textContent = ('Product')
-bottH4s[2].textContent = ('Vision')
+// bottH4s[0].textContent = ('Services')
+// bottH4s[1].textContent = ('Product')
+// bottH4s[2].textContent = ('Vision')
+bottH4s[0].textContent = siteContent['main-content']['services-h4']
+bottH4s[1].textContent = siteContent['main-content']['product-h4']
+bottH4s[2].textContent = siteContent['main-content']['vision-h4']
 
 
 //add verbiage to bottom p tags
 const bottPs = bottInMain.querySelectorAll ('p')
 console.log(bottPs)
 
-bottPs[0].textContent = ('Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.')
-bottPs[1].textContent = ('Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.')
-bottPs[2].textContent = ('Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.')
+// bottPs[0].textContent = ('Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.')
+// bottPs[1].textContent = ('Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.')
+// bottPs[2].textContent = ('Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.')
+bottPs[0].textContent = siteContent['main-content']['services-content']
+bottPs[1].textContent = siteContent['main-content']['product-content']
+bottPs[2].textContent = siteContent['main-content']['vision-content']
 
 //access to contact section
 
@@ -129,20 +157,27 @@ const contact = document.querySelector('.contact')
 const contH4 = contact.querySelector ('h4')
 console.log(contH4)
 
-contH4.textContent = ('Contact')
+// contH4.textContent = ('Contact')
+contH4.textContent = siteContent['contact']['contact-h4']
 
 //add verbiage to p tags in contact section
 const contPs = contact.querySelectorAll ('p')
 console.log(contPs)
 
-contPs[0].textContent = ('123 Way 456 Steet <br> Somewhere USA')
-contPs[1].textContent = ('1 (888) 888-8888')
-contPs[2].textContent = ('sales@greatidea.io')
+// contPs[0].textContent = ('123 Way 456 Steet <br> Somewhere USA')
+// contPs[1].textContent = ('1 (888) 888-8888')
+// contPs[2].textContent = ('sales@greatidea.io')
+contPs[0].textContent = siteContent['contact']['address']
+contPs[1].textContent = siteContent['contact']['phone']
+contPs[2].textContent = siteContent['contact']['email']
 
 //access to footer
-
 const footer = document.querySelector('footer')
-footer.textContent = ('Copyright Great Idea! 2018')
+
+
+//add footer text
+// footer.textContent = ('Copyright Great Idea! 2018')
+footer.textContent = siteContent['footer']['copyright']
 
 
 
